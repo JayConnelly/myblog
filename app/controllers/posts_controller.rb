@@ -6,7 +6,8 @@ class PostsController < ApplicationController
 	end
 
 	def new
-	
+		@new1 = "New content 1"
+		@new2 = "New content 2"
 	end
 
 	def create
