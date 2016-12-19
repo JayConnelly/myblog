@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   # Jay added the next line.
 
   root :to => "home#index"
-  get 'about', to: 'static#about'
+   get 'about', to: 'static#about'
+#  get 'posts', to: 'posts#index'
+  resources :posts
+
 end
