@@ -1,24 +1,31 @@
 class PostsController < ApplicationController
 	def index
-		@index1 = "this is the local variable index1 inside index action"
-		@index2 = "this is the local variable index1 inside index action"
-		
+		@posts = Post.all()		
+	end
+
+	def show
+		@post = Post.find(params[:id])
 	end
 
 	def new
-		@new1 = "New  1"
-		@new2 = "New  2"
+		@post = Post.new
+	end
+	
+	def post_params
+		params.require(:post).permit(:id, :body, :category_id)
 	end
 
 	def create
-		@create1 = " create 1"
-		@create1 = " create 2"
-	
+		@post = Post.new(post_params)
+		if @post.save
+			redirect_to posts_path, :notice => "Your post was saved"
+		else
+			render new
+		end
 	end
 
 	def edit
-		@edit1 = " edit 1"
-		@edit2 = " edit 2"
+		@post = Post.find(params[:id])
 	
 	end
 
@@ -28,11 +35,6 @@ class PostsController < ApplicationController
 	
 	end
 
-	def show
-		@show1 = " show 1"
-		@show2 = " show 2"
-	
-	end
 
 	def destroy
 		@destroy1 = " destroy 1"

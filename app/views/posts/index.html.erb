@@ -1,6 +1,8 @@
 <h1>in the posts/index</h1>
-<h2> sample blog 1 </h2>
-<p> <%= @index1 %></p>
+<% @posts.each do |p| %>
+<%= link_to p.title, p %>
+<%= p.body %>
+<p>
+<%= p.category_id %>
 <hr>
-<h2> sample blog 2 </h2>
-<p><%= @index2%></p>
+<% end %>
