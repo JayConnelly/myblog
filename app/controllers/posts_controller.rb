@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 	end
 	
 	def post_params
-		params.require(:post).permit(:id, :body, :category_id)
+		params.require(:post).permit(:id, :title, :body, :category_id)
 	end
 
 	def create
@@ -20,25 +20,27 @@ class PostsController < ApplicationController
 		if @post.save
 			redirect_to posts_path, :notice => "Your post was saved"
 		else
-			render new
+			render "new"
 		end
 	end
 
 	def edit
 		@post = Post.find(params[:id])
-	
 	end
 
 	def update
-		@update1 = " update 1"
-		@update2 = " update 2"
-	
+		@post = Post.find(params[:id])
+		if @post.update_attributes(post_params)
+			redirect_to posts_path, :notice => "Your post was edited"
+		else
+			render "edit"
+		end
 	end
 
 
 	def destroy
-		@destroy1 = " destroy 1"
-		@destroy2 = " destroy 2"
-	
+		@post = Post.find(params[:id])
+		@post.destroy
+		redirect_to posts_path, :notice => "Your post was destroyed"
 	end
 end
