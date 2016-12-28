@@ -12,7 +12,7 @@ default: &default
 
 development:
   <<: *default
-  database: myBlog
+  database: myblog
   username: postgres
   password: c0nne11y
   
@@ -22,13 +22,13 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: myBlog
+  database: myblog
   username: postgres
   password: c0nne11y
 
 
 production:
   <<: *default
-  database: myBlog
+  database: myblog
   username: postgres
   password: c0nne11y
