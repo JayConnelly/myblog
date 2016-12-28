@@ -1,5 +1,4 @@
 <h1>in the posts/index</h1>
-<%= :notice %>
 <% @posts.each do |p| %>
 <%= link_to p.title, p %>
 <%= p.body %>
@@ -7,4 +6,4 @@
 <%= p.category_id %>
 <hr>
 <% end %>
-<%= button_to "Create another post" , new_post_path %>
+<%= link_to "Create another post" , new_post_path %>
