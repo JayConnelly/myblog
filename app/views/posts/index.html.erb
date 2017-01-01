@@ -3,7 +3,7 @@
 <%= link_to p.title, p %>
 <%= p.body %>
 <p>
-<%= p.category_id %>
+<%= @catName = "Category = " +Category.find(p.category_id).name %>
 <hr>
 <% end %>
 <%= link_to "Create another post" , new_post_path %>

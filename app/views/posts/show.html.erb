@@ -2,7 +2,7 @@
 <h1> <%= display %> </h1>
 <p>
 <h2> <%= @post.title %> </h2>
-<h2> <%= @post.id %> </h2>
 <p><%= @post.body %></p>
-<%= link_to "Edit", edit_post_path %> | <%= button_to "Delete", @post,  :method => :delete %> 
+<%= link_to "Back to " + @post.category.name + " category" , category_path(@post.category_id) %></br>
+<%= link_to 'Back', posts_path %>
 <p> </p>

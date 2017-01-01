@@ -5,6 +5,8 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
+		@catName = Category.name
+		@allPosts = Post.where(cetegory_id: @post.category_id)
 	end
 
 	def new
