@@ -3,9 +3,35 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-# Use sqlite3 as the database for Active Record
-# commenting this out for heroku exercise - gem 'sqlite3'
+# Use postgres as the database for Active Record
 gem 'pg'
+
+# trying to fix the dependency problem for active admin 
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+# use active admin for authentication
+gem 'activeadmin', github: 'activeadmin'
+
+#adding more gems to get active admin working
+  gem 'devise',      '> 4.x'
+  gem 'rspec-rails', '>= 3.5.0.beta1'
+  gem 'ransack',    github: 'activerecord-hackery/ransack'
+  gem 'kaminari',   github: 'amatsuda/kaminari', branch: '0-17-stable'
+  gem 'formtastic', github: 'justinfrench/formtastic'
+  gem 'draper',     github: 'audionerd/draper', branch: 'rails5', ref: 'e816e0e587'
+
+  # To fix a Draper deprecation error
+  gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
+
+  # Optional -- only if you already include these gems
+  gem 'rack-mini-profiler',          github: 'MiniProfiler/rack-mini-profiler'
+  gem 'database_cleaner',            github: 'pschambacher/database_cleaner'
+
+
+
+
+
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -13,7 +39,8 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+#gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
