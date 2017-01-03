@@ -23,8 +23,8 @@ gem 'activeadmin', github: 'activeadmin'
   gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
 
   # Optional -- only if you already include these gems
-  gem 'rack-mini-profiler',          github: 'MiniProfiler/rack-mini-profiler'
-  gem 'database_cleaner',            github: 'pschambacher/database_cleaner'
+  # gem 'rack-mini-profiler',          github: 'MiniProfiler/rack-mini-profiler'
+  # gem 'database_cleaner',            github: 'pschambacher/database_cleaner'
 
 
 
@@ -33,7 +33,7 @@ gem 'activeadmin', github: 'activeadmin'
 
 
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+# gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
