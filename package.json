@@ -13,6 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/JayConnelly/myblog.git"
   },
+   "engines": {
+    "node": "6.9.2"
+	"npm": "3.10.9"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
