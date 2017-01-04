@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-  root :to => "home#index"  
+
+
 
   
 
   get 'home/index'
-
+  root :to => "home#index"  
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # Jay added the next line.
 
@@ -15,5 +16,5 @@ Rails.application.routes.draw do
 #  get 'posts', to: 'posts#index'
   resources :posts
   resources :categories
-
+  ActiveAdmin.routes(self)
 end
