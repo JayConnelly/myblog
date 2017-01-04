@@ -4,11 +4,13 @@ ruby '2.2.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+
 # Use postgres as the database for Active Record
 gem 'pg'
 
 # trying to fix the dependency problem for active admin 
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 # use active admin for authentication
 gem 'activeadmin', github: 'activeadmin'
 
